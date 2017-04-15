@@ -166,6 +166,10 @@ ot.TextOperation = (function () {
   TextOperation.prototype.toJSON = function () {
     return this.ops;
   };
+  
+  TextOperation.prototype.toFullObjectJson = function () {
+    return this;
+  };
 
   // Converts a plain JS object into an operation and validates it.
   TextOperation.fromJSON = function (ops) {
